@@ -9,6 +9,8 @@ Get-NetAdapter
 #to find $switchID
 
 New-NetIPAddress -IPAddress 172.17.0.1 -PrefixLength 16 -InterfaceIndex $switchId
+New-NetNat -Name MyVmNatNet -InternalIPInterfaceAddressPrefix 172.17.0.0/1
+
 ```
 
 * #### use this net in your vms and be happy :)
